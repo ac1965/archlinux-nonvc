@@ -1,5 +1,5 @@
 # Docker Image Name (is taken from package.json file)
-NAME = archstrike-novnc
+NAME = archlinux-novnc
 
 # Image Version (is taken from package.json file)
 ##VERSION = $(shell cd .; git describe --long --tags --dirty --always)

@@ -1,11 +1,11 @@
+emacs
 firefox
 geany
 openbox
 python-numpy
 pyxdg
 rdesktop
-unzip
-wget
+urxvt-unicode
 x11vnc
 xorg-server-xvfb
 xterm
