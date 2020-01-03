@@ -5,7 +5,7 @@ openbox
 python-numpy
 pyxdg
 rdesktop
-urxvt-unicode
+rxvt-unicode
 x11vnc
 xorg-server-xvfb
 xterm
