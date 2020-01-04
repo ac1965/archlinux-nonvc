@@ -19,14 +19,17 @@ check_exists:
 # Run image
 run: check_exists
 	docker run -dti -p 6080:6080 \
-		--name $(NAME)-$(shell date +%Y%m%d) \
+		--cap-add=NET_ADMIN --device /dev/net/tun \
+		--volume /tmp/share:/tmp/share \
 		$(NAME):$(VERSION)
 
 # Used for quality diagnostics
 # Opens bash session
 run_bash: check_exists
 	docker run -dti -p 6080:6080 \
-		--name $(NAME)-$(shell date +%Y%m%d) \
+		--cap-add=NET_ADMIN --device /dev/net/tun \
+		--volume /tmp/share:/tmp/share \
+		--entrypoint=/bin/bash \
 		$(NAME):$(VERSION)
 
 # Remove Docker image
